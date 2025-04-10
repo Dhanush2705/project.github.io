@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('pictures/college.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    filter: brightness(0.9);
+}
+
+/* Optional: add a slight overlay to dim the background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+}
+
+  
+  .chat-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .chat-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .chat-header {
+    text-align: center;
+  }
+  
+  .bot-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .chat-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 20px 0;
+    padding-right: 10px;
+  }
+  
+  .user-msg,
+  .bot-msg {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    max-width: 80%;
+  }
+  
+  .user-msg {
+    background-color: #daf5ff;
+    align-self: flex-end;
+  }
+  
+  .bot-msg {
+    background-color: #f3f3f3;
+    align-self: flex-start;
+  }
+  
+  .input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .input-area input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .input-area button {
+    background-color: #00c853;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .input-area button:hover {
+    background-color: #009624;
+  }
+  .input-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin: 15px;
+  }
+  
+  .input-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+  
+  .input-container button {
+    background: none;
+    border: none;
+    color: #00c853;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+/* Chat message styling */
+.message-bubble {
+    max-width: 75%;
+    margin: 8px 12px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+    display: inline-block;
+    clear: both;
+    word-wrap: break-word;
+  }
+  
+  /* User messages - right aligned, green bubble */
+  .user-message {
+    background-color: #dcf8c6;
+    color: #000;
+    float: right;
+    text-align: right;
+    border-bottom-right-radius: 0;
+  }
+  
+  /* Bot messages - left aligned, grey bubble */
+  .bot-message {
+    background-color: #f1f0f0;
+    color: #000;
+    float: left;
+    text-align: left;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* Clearfix after messages */
+  #chatbox::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #chatbox {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .timestamp {
+    display: block;
+    font-size: 10px;
+    color: #777;
+    margin-top: 5px;
+    text-align: right;
+}
