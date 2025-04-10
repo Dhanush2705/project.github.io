@@ -12,7 +12,7 @@ function sendMessage() {
 
     const typing = showBotTyping();
 
-    fetch(`/get?msg=${encodeURIComponent(userInput)}`)
+    fetch(`https://chatbot-backend-co0s.onrender.com/get?msg=${encodeURIComponent(userInput)}`)
         .then(response => response.json())
         .then(data => {
             chatContainer.removeChild(typing);
